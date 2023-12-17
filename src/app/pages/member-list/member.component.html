@@ -1,0 +1,162 @@
+<div class="view-wrapper">
+    <dx-data-grid
+        class="grid"
+        noDataText=""
+        height="100%"
+        [dataSource]="dataSource"
+        [allowColumnReordering]="true"
+        [focusedRowEnabled]="true"
+        [(focusedRowKey)]="userId"
+        (onRowClick)="rowClick($event)"
+        (onRowRemoving)="logEvent('RowRemoving')"
+        [columnAutoWidth]="true"
+    >   
+        <dxo-load-panel [showPane]="false"></dxo-load-panel>
+        <dxo-scrolling mode="virtual"></dxo-scrolling>
+        <dxo-paging [pageSize]="15"></dxo-paging>
+        <dxo-pager [visible]="true" [showPageSizeSelector]="true"></dxo-pager>
+        <dxo-editing mode="popup" [allowUpdating]="true" [allowDeleting]="true"> 
+            <!-- Popup for editting -->
+            <dxo-popup
+                [title]="'edit' | translate"
+                [showTitle]="true"
+                [width]="700"
+                [height]="350"
+            ></dxo-popup>
+            <dxo-form>
+                <dxi-item itemType="group" [colCount]="2" [colSpan]="2">
+                    <dxi-item dataField="name"></dxi-item>
+                    <dxi-item dataField="company"></dxi-item>
+                    <dxi-item dataField="status"></dxi-item>
+                    <dxi-item dataField="phone"></dxi-item>
+                    <dxi-item dataField="email"></dxi-item>
+                </dxi-item>
+            </dxo-form>
+        </dxo-editing>
+        <dxo-sorting mode="multiple"></dxo-sorting>
+        <dxo-header-filter [visible]="true"></dxo-header-filter>
+
+        <!-- Header -->
+        <dxo-toolbar>
+            <dxi-item location="before">
+              <div class="grid-header">{{'member' | translate}}</div>
+            </dxi-item>
+            
+            <dxi-item locateInMenu="auto" location="before">
+                <filter-toolbar ></filter-toolbar>
+            </dxi-item>
+            <dxi-item location="after" locateInMenu="auto">
+                <dx-button
+                  [text]="'Search' | translate"
+                  icon="search"
+                  type="success"
+                  stylingMode="contained"
+                  (onClick)="onSearch()"
+                ></dx-button>
+              </dxi-item>
+            <dxi-item location="after" locateInMenu="auto">
+              <dx-button
+                [text]="'add' | translate"
+                icon="plus"
+                type="default"
+                stylingMode="contained"
+                (onClick)="addContact()"
+              ></dx-button>
+            </dxi-item>
+            <dxi-item
+              location="after"
+              locateInMenu="auto"
+              showText="inMenu"
+              widget="dxButton"
+              [options]="{
+                text: 'Refresh',
+                icon: 'refresh',
+                onClick: refresh,
+                stylingMode: 'text'
+              }"
+            ></dxi-item>
+        </dxo-toolbar>
+
+        <!-- Defined Columns -->
+        <dxi-column
+            dataField="stt"
+            caption="STT"
+            sortOrder="asc"
+            width="100"
+            cellTemplate="stt"
+        ></dxi-column>
+        <dxi-column
+            dataField="name"
+            [caption]="'fullname' | translate"
+            [hidingPriority]="5"
+            [minWidth]="150"
+            cellTemplate="name"
+        ></dxi-column>
+        <dxi-column
+            dataField="company"
+            [caption]="'department' | translate"
+            [hidingPriority]="5"
+            [minWidth]="150"
+        ></dxi-column>
+        <dxi-column
+            dataField="status"
+            [caption]="'status' | translate"
+            cellTemplate="cellStatus"
+            editCellTemplate="editCellStatus"
+            [hidingPriority]="3"
+            [minWidth]="100"
+        ></dxi-column>
+        <dxi-column
+            dataField="phone"
+            [caption]="'phone' | translate"
+            [customizeText]="customizePhoneCell"
+            [hidingPriority]="2"
+        ></dxi-column>
+        <dxi-column
+            dataField="email"
+            caption="Email"
+            [hidingPriority]="1"
+        ></dxi-column>
+
+        <div *dxTemplate="let data of 'stt'">  
+            <div >{{data.data.stt}}</div>  
+        </div> 
+
+        <div *dxTemplate="let cellInfo of 'name'" class="name-template">
+            <div>
+                <div>{{ cellInfo.data.name }}</div>
+                <div class="position">{{ cellInfo.data.position }}</div>
+            </div>
+        </div>
+
+        <div *dxTemplate="let cellInfo of 'cellStatus'">
+            <contact-status [value]="cellInfo.data.status"></contact-status>
+        </div>
+
+        <div *dxTemplate="let cellInfo of 'editCellStatus'">
+            <dx-select-box
+                class="edit-cell"
+                [(value)]="cellInfo.value"
+                [items]="statusList"
+                (onValueChanged)="cellInfo.setValue($event.value)"
+                (onSelectionChanged)="cellInfo.component.updateDimensions()"
+                fieldTemplate="field"
+            >
+                <div *dxTemplate="let data of 'field'">
+                    <contact-status [value]="cellInfo.value"></contact-status>
+                    <dx-text-box [readOnly]="true"></dx-text-box>
+                </div>
+                <div *dxTemplate="let data of 'item'">
+                    <contact-status [value]="data"></contact-status>
+                </div>
+            </dx-select-box>
+        </div>
+
+    </dx-data-grid>
+
+    <form-popup [(visible)]="isAddContactPopupOpened" (save)= "onClickSaveNewMember()" 
+        [titleText]="('add' | translate) + ' ' + ('member' | translate)"
+    >
+        <contact-new-form></contact-new-form>
+    </form-popup>
+</div>

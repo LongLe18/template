@@ -1,0 +1,50 @@
+<dx-scroll-view class="view-wrapper-scroll">
+  <div class="view-wrapper">
+    <dx-toolbar class="toolbar-details">
+      <dxi-item location="before">
+        <dx-button icon="arrowleft" stylingMode="text"></dx-button>
+      </dxi-item>
+      <dxi-item location="before" [text]="'add' | translate"></dxi-item>
+      <dxi-item
+        location="after"
+        locateInMenu="auto"
+        widget="dxButton"
+        showText="inMenu"
+        [options]="{
+          text: 'Refresh',
+          icon: 'refresh',
+          onClick: refresh,
+          stylingMode: 'text'
+        }"
+      ></dxi-item>
+    </dx-toolbar>
+
+    <div class="dx-card details-card">
+      <dx-tab-panel [showNavButtons]="true" [deferRendering]="false">
+        <dxi-item title="A tabs">
+          
+        </dxi-item>
+        <dxi-item title="B tabs">
+          
+        </dxi-item>
+      </dx-tab-panel>
+    </div>
+
+    <div class="corner-button">
+      <dx-button
+          [text]="'dxDataGrid-editingSaveRowChanges' | translate"
+          icon="save"
+          type="success"
+          stylingMode="contained"
+          style="padding: 8px 12px"
+        ></dx-button>
+        <dx-button
+          [text]="'Close' | translate"
+          icon="close"
+          type="normal"
+          stylingMode="contained"
+          style="padding: 8px 12px"
+        ></dx-button>
+    </div>
+  </div>
+</dx-scroll-view>
