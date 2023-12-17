@@ -8,12 +8,9 @@ import { Contact, contactStatusList, } from 'src/app/types/contact';
 import { formatMessage } from 'devextreme/localization';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 import { formatPhone } from 'src/app/pipes/phone.pipe';
-import { ContactStatusModule, FormPopupModule } from 'src/app/devexpress';
+import { ContactStatusModule, FormPopupModule, ContactNewFormComponent, ContactNewFormModule } from 'src/app/devexpress';
 import notify from 'devextreme/ui/notify';
-import { ContactNewFormComponent, ContactNewFormModule } from 'src/app/devexpress/library/contact-new-form/contact-new-form.component';
-import { FilterToolBarModule, FilterToolBarComponent } from 'src/app/components/filter-toolbar/filter-toolbar.component';
-
-import { Filter, filter } from 'src/app/types/filter'; // types
+import { FilterToolBarModule, FilterToolBarComponent } from 'src/app/components';
 
 @Component({
   templateUrl: './member.component.html',
@@ -39,8 +36,7 @@ export class MemberComponent {
 
   events: Array<string> = [];
 
-  objSearch: Filter = filter;
-
+  // sample call api
   dataSource = new DataSource<Contact[], string>({
     key: 'id',
     load: () => new Promise((resolve, reject) => {
@@ -80,7 +76,9 @@ export class MemberComponent {
   }
 
   onClickSaveNewMember = () => {
-    const { firstName, lastName} = this.memberNewForm.getNewContactData();
+    const { firstName, lastName } = this.memberNewForm.getNewContactData();
+    // request API - post data using service
+
     notify({
         message: `${formatMessage('add')} ${formatMessage('member')} "${firstName} ${lastName}" saved`,
         position: { at: 'top center', my: 'top center' }

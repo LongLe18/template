@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { DxTreeViewModule, DxTreeViewComponent, DxTreeViewTypes } from 'devextreme-angular/ui/tree-view';
 import * as events from 'devextreme/events';
-import { navigation } from '../../../app-navigation';
+import { navigation } from '../../app-navigation';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 import { formatMessage } from 'devextreme/localization';
 

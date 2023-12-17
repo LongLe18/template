@@ -11,13 +11,17 @@ import {
 } from 'src/app/devexpress/library/password-text-box/password-text-box.component';
 
 import { ValidationRule } from 'devextreme-angular/common';
+import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { formatMessage } from 'devextreme/localization';
 
 @Component({
-  selector: 'change-profile-password-form',
-  templateUrl: './change-profile-password-form.component.html',
-  styleUrls: ['./change-profile-password-form.component.scss']
+  selector: 'change-profile-password',
+  templateUrl: './change-profile-password.component.html',
+  styleUrls: ['./change-profile-password.component.scss']
 })
-export class ChangeProfilePasswordFormComponent {
+export class ChangeProfilePasswordComponent {
+  formatMessage = formatMessage;
+
   @ViewChild(FormPopupComponent, { static: true }) formPopup;
 
   @ViewChild('confirmField', { static: true }) confirmField: PasswordTextBoxComponent;
@@ -33,7 +37,7 @@ export class ChangeProfilePasswordFormComponent {
   confirmPasswordValidators: ValidationRule[] = [
     {
       type: 'compare',
-      message: 'Passwords do not match',
+      message: formatMessage('message-pasword-error'),
       comparisonTarget: () => this.formData.password,
     },
   ];
@@ -70,8 +74,9 @@ export class ChangeProfilePasswordFormComponent {
     DxLoadIndicatorModule,
     PasswordTextBoxModule,
     FormPopupModule,
+    TranslatePipeModule,
   ],
-  declarations: [ChangeProfilePasswordFormComponent],
-  exports: [ChangeProfilePasswordFormComponent],
+  declarations: [ChangeProfilePasswordComponent],
+  exports: [ChangeProfilePasswordComponent],
 })
-export class ChangeProfilePasswordFormModule { }
+export class ChangeProfilePasswordModule { }

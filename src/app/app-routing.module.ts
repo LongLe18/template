@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import {
-  LoginFormComponent,
-  ResetPasswordFormComponent,
-  CreateAccountFormComponent,
-  ChangePasswordFormComponent,
+  LoginComponent,
+  ResetPasswordComponent,
+  CreateAccountComponent,
+  ChangePasswordComponent,
   AnalyticsDashboardComponent,
   UserProfileComponent,
   MemberComponent,
@@ -23,19 +23,19 @@ const routes: Routes = [
     children: [
       {
         path: 'login',
-        component: LoginFormComponent,
+        component: LoginComponent,
       },
       {
         path: 'reset-password',
-        component: ResetPasswordFormComponent,
+        component: ResetPasswordComponent,
       },
       {
         path: 'create-account',
-        component: CreateAccountFormComponent,
+        component: CreateAccountComponent,
       },
       {
         path: 'change-password/:recoveryCode',
-        component: ChangePasswordFormComponent,
+        component: ChangePasswordComponent,
       },
       {
         path: '**',
@@ -66,7 +66,7 @@ const routes: Routes = [
       {
         path: "file",
         component: FileListComponent,
-        // canActivate: [AuthGuardService],
+        canActivate: [AuthGuardService],
       },
       {
         path: '**',

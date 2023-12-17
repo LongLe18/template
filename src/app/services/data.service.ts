@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, from } from 'rxjs';
 import { DateTime } from 'luxon';
 import {
@@ -17,7 +17,25 @@ import { environment } from 'src/environments/environment';
 @Injectable()
 export class DataService {
   constructor(private http: HttpClient) {}
+  // sample post request
+  addContact(contact: Contact): Observable<Contact> {
+    return this.http.post<Contact>(`${environment.apiUrl}/Users/Contacts`, contact)
+  }
 
+  // sample GET request - search query params
+  /* GET Contacts whose name contains search term */
+  searchHeroes(term: string): Observable<Contact[]> {
+    term = term.trim();
+
+    // Add safe, URL encoded search parameter if there is a search term
+    const options = term ?
+    { params: new HttpParams().set('name', term) } : {};
+
+    return this.http.get<Contact[]>(`${environment.apiUrl}/Users/Contacts`, options)
+  }
+
+  // sample GET request
+  // options: full response - observe: 'response'
   public getContacts = () =>
     this.http.get<Contact[]>(`${environment.apiUrl}/Users/Contacts`);
 

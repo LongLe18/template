@@ -6,7 +6,7 @@ import {
   DxValidatorModule,
   DxScrollViewModule
 } from 'devextreme-angular';
-import { FormTextboxModule } from 'src/app/devexpress/utils/form-textbox/form-textbox.component';
+// import { FormTextboxModule } from 'src/app/devexpress/utils/form-textbox/form-textbox.component';
 import { FormPhotoModule } from 'src/app/devexpress/utils/form-photo/form-photo.component';
 import { ApplyPipeModule } from 'src/app/pipes/apply.pipe';
 import { PicturedItemSelectBoxModule } from 'src/app/devexpress/library/pictured-item-select-box/pictured-item-select-box.component';
@@ -70,7 +70,7 @@ export class ProfileCardComponent {
     DxSelectBoxModule,
     DxScrollViewModule,
     DxTextBoxModule,
-    FormTextboxModule,
+    // FormTextboxModule,
     FormPhotoModule,
     DxValidatorModule,
     CommonModule,

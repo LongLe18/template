@@ -9,12 +9,13 @@ import { Observable } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class ApiInterceptor implements HttpInterceptor {
+  constructor() {}
+
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    // const apiReq = req.clone({ url: `https://api.realworld.io/api${req.url}` });
-    const apiReq = req.clone({ url: `${req.url}` });
+    const apiReq = req.clone({ url: `${req.url}`});
     return next.handle(apiReq);
   }
 }

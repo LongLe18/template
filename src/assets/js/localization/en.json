@@ -17,6 +17,8 @@
         "profile": "User Profile",
         "basicinfo": "Basic Info",
         "changePassword": "Change password",
+        "password": "Password",
+        "currentPassword": "Current password",
         "fullname": "Full Name",
         "department": "Department",
         "position": "Position",
@@ -47,6 +49,7 @@
         "loginGoogle": "Login with Google",
         "loginMicrosoft": "Login with Microsoft",
 
+        "request-error": "Something bad happened; please try again later.",
         "resetpassword-message": "Please enter the email address that you used to register, and we will send you a link to reset your password via Email.",
         "message-email": "Email is required",
         "message-email-error": "Email is invalid",

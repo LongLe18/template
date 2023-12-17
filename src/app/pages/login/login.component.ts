@@ -12,11 +12,11 @@ import { CommonConst } from 'src/app/constants/commom';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginFormComponent implements OnInit {
+export class LoginComponent implements OnInit {
   @Input() resetLink = CommonConst.RESET_PASSWORD;
   @Input() createAccountLink = CommonConst.SIGNUP;
 
@@ -88,7 +88,7 @@ export class LoginFormComponent implements OnInit {
     DxButtonModule,
     TranslatePipeModule,
   ],
-  declarations: [LoginFormComponent],
-  exports: [LoginFormComponent],
+  declarations: [LoginComponent],
+  exports: [LoginComponent],
 })
-export class LoginFormModule { }
+export class LoginModule { }

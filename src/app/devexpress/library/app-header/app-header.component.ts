@@ -46,7 +46,7 @@ export class AppHeaderComponent implements OnInit {
     text: 'Đổi mật khẩu',
     icon: 'lock',
     onClick: () => {
-      this.router.navigate(['/reset-password-form']);
+      this.router.navigate(['/user-profile']);
     },
   },
   {

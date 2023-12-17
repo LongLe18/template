@@ -9,5 +9,5 @@ export class CommonConst {
 
     public static RESET_PASSWORD = '/auth/reset-password';
     public static SIGNUP = '/auth/create-account';
-    public static CHANGE_PASSWORD = '/change-password'
+    public static CHANGE_PASSWORD = '/change-password';
 }

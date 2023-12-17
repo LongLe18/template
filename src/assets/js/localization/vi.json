@@ -17,6 +17,8 @@
         "profile": "Thông tin tài khoản",
         "basicinfo": "Thông tin cơ bản",
         "changePassword": "Đổi mật khẩu",
+        "password": "Mật khẩu",
+        "currentPassword": "Mật khẩu hiện tại",
         "fullname": "Họ và tên",
         "department": "Đơn vị",
         "position": "Vị trí",
@@ -47,6 +49,7 @@
         "loginGoogle": "Đăng nhập bằng google",
         "loginMicrosoft": "Đăng nhập bằng Microsoft",
 
+        "request-error": "Một số lỗi đã có thể xảy ra. Xin vui lòng thử lại sau.",
         "resetpassword-message": "Vui lòng nhập địa chỉ email mà bạn đã sử dụng để đăng ký và chúng tôi sẽ gửi cho bạn liên kết để đặt lại mật khẩu qua Email.",
         "message-email": "Email là bắt buộc",
         "message-email-error": "Email không hợp lệ",

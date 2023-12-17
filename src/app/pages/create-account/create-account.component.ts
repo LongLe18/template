@@ -11,11 +11,11 @@ import { AuthService, IResponse } from 'src/app/services';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 
 @Component({
-  selector: 'app-create-account-form',
-  templateUrl: './create-account-form.component.html',
-  styleUrls: ['./create-account-form.component.scss'],
+  selector: 'app-create-account',
+  templateUrl: './create-account.component.html',
+  styleUrls: ['./create-account.component.scss'],
 })
-export class CreateAccountFormComponent implements OnInit {
+export class CreateAccountComponent implements OnInit {
   @Input() redirectLink = '/auth/login';
   @Input() buttonLink = '/auth/login';
   loading = false;
@@ -56,7 +56,7 @@ export class CreateAccountFormComponent implements OnInit {
     DxLoadIndicatorModule,
     TranslatePipeModule,
   ],
-  declarations: [CreateAccountFormComponent],
-  exports: [CreateAccountFormComponent],
+  declarations: [CreateAccountComponent],
+  exports: [CreateAccountComponent],
 })
-export class CreateAccountFormModule { }
+export class CreateAccountModule { }

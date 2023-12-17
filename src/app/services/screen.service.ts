@@ -42,7 +42,7 @@ export class ScreenService {
         });
         this.changed.next(data);
       }
-      );
+    );
   }
 
   private isLargeScreen() {

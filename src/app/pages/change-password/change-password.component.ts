@@ -10,10 +10,10 @@ import { AuthService } from '../../services';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-change-password-form',
-  templateUrl: './change-password-form.component.html',
+  selector: 'app-change-password',
+  templateUrl: './change-password.component.html',
 })
-export class ChangePasswordFormComponent implements OnInit, OnDestroy {
+export class ChangePasswordComponent implements OnInit, OnDestroy {
   loading = false;
 
   formData: any = {};
@@ -58,7 +58,7 @@ export class ChangePasswordFormComponent implements OnInit, OnDestroy {
     DxFormModule,
     DxLoadIndicatorModule,
   ],
-  declarations: [ChangePasswordFormComponent],
-  exports: [ChangePasswordFormComponent],
+  declarations: [ChangePasswordComponent],
+  exports: [ChangePasswordComponent],
 })
-export class ChangePasswordFormModule { }
+export class ChangePasswordModule { }

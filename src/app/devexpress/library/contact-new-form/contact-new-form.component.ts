@@ -8,10 +8,7 @@ import {
   DxFormModule,
   DxValidatorModule,
 } from 'devextreme-angular';
-import {
-  FormTextboxModule,
-  FormPhotoUploaderModule,
-} from 'src/app/devexpress';
+import { FormPhotoUploaderModule, FormTextboxModule } from 'src/app/components';
 import { newContact } from 'src/app/types/contact';
 import { getSizeQualifier } from 'src/app/services/screen.service';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
@@ -28,7 +25,7 @@ export class ContactNewFormComponent {
   getSizeQualifier = getSizeQualifier;
   constructor() { }
 
-  getNewContactData = ()=> ({ ...this.newUser })
+  getNewContactData = () => ({ ...this.newUser })
 }
 
 @NgModule({

@@ -7,12 +7,12 @@ import { ApiInterceptor } from "./interceptors/api.interceptor";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
-import { SideNavOuterToolbarComponent, SideNavOuterToolbarModule, SingleCardModule } from './layouts';
+import { SideNavOuterToolbarModule, SingleCardModule } from './layouts';
 import {
-  ResetPasswordFormModule,
-  CreateAccountFormModule,
-  ChangePasswordFormModule,
-  LoginFormModule,
+  ResetPasswordModule,
+  CreateAccountModule,
+  ChangePasswordModule,
+  LoginModule,
   AnalyticsDashboardModule,
 } from './pages';
 import { 
@@ -31,12 +31,12 @@ import { AppRoutingModule } from './app-routing.module';
     SideNavOuterToolbarModule,
     SingleCardModule,
     AppFooterModule,
-    ResetPasswordFormModule,
-    CreateAccountFormModule,
-    ChangePasswordFormModule,
-    LoginFormModule,
-    UnauthenticatedContentModule,
+    ResetPasswordModule,
+    CreateAccountModule,
+    ChangePasswordModule,
+    LoginModule,
     AnalyticsDashboardModule,
+    UnauthenticatedContentModule,
     
     AppRoutingModule,
     HttpClientModule,

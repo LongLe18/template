@@ -10,11 +10,11 @@ import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 const notificationText = 'We\'ve sent a link to reset your password. Check your inbox.';
 
 @Component({
-  selector: 'reset-password-form',
-  templateUrl: './reset-password-form.component.html',
-  styleUrls: ['./reset-password-form.component.scss'],
+  selector: 'reset-password',
+  templateUrl: './reset-password.component.html',
+  styleUrls: ['./reset-password.component.scss'],
 })
-export class ResetPasswordFormComponent implements OnInit {
+export class ResetPasswordComponent implements OnInit {
   @Input() signInLink = '/auth/login';
 
   @Input() buttonLink = '/auth/login';
@@ -55,7 +55,7 @@ export class ResetPasswordFormComponent implements OnInit {
     DxLoadIndicatorModule,
     TranslatePipeModule,
   ],
-  declarations: [ResetPasswordFormComponent],
-  exports: [ResetPasswordFormComponent],
+  declarations: [ResetPasswordComponent],
+  exports: [ResetPasswordComponent],
 })
-export class ResetPasswordFormModule { }
+export class ResetPasswordModule { }
