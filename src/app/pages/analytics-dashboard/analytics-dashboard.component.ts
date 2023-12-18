@@ -14,16 +14,9 @@ import { DxLoadPanelModule } from 'devextreme-angular/ui/load-panel';
 import { DxScrollViewModule } from 'devextreme-angular/ui/scroll-view';
 
 import { DataService } from 'src/app/services';
-import { CardAnalyticsModule } from 'src/app/devexpress/library/card-analytics/card-analytics.component';
-import { ToolbarAnalyticsModule } from 'src/app/devexpress/utils/toolbar-analytics/toolbar-analytics.component';
-import { ConversionCardModule } from 'src/app/devexpress/utils/conversion-card/conversion-card.component';
-import { RevenueCardModule } from 'src/app/devexpress/utils/revenue-card/revenue-card.component';
-import { RevenueAnalysisCardModule } from 'src/app/devexpress/utils/revenue-analysis-card/revenue-analysis-card.component';
-import { RevenueSnapshotCardModule } from 'src/app/devexpress/utils/revenue-snapshot-card/revenue-snapshot-card.component';
-import { OpportunitiesTickerModule } from 'src/app/devexpress/utils/opportunities-ticker/opportunities-ticker.component';
-import { RevenueTotalTickerModule } from 'src/app/devexpress/utils/revenue-total-ticker/revenue-total-ticker.component';
-import { ConversionTickerModule } from 'src/app/devexpress/utils/conversion-ticker/conversion-ticker.component';
-import { LeadsTickerModule } from 'src/app/devexpress/utils/leads-ticker/leads-ticker.component';
+import { CardAnalyticsModule } from 'src/app/components/card-analytics/card-analytics.component';
+import { RevenueAnalysisCardModule, RevenueSnapshotCardModule, ConversionCardModule, RevenueCardModule,
+  ToolbarAnalyticsModule, TickerCardModule } from 'src/app/components';
 import { analyticsPanelItems, Dates } from 'src/app/types/resource';
 import {
   Sales, SalesByState, SalesByStateAndCity, SalesOrOpportunitiesByCategory,
@@ -106,10 +99,7 @@ export class AnalyticsDashboardComponent implements OnInit {
     RevenueAnalysisCardModule,
     RevenueCardModule,
     RevenueSnapshotCardModule,
-    OpportunitiesTickerModule,
-    RevenueTotalTickerModule,
-    ConversionTickerModule,
-    LeadsTickerModule,
+    TickerCardModule,
     CommonModule,
   ],
   providers: [],

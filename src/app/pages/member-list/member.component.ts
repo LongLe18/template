@@ -8,9 +8,9 @@ import { Contact, contactStatusList, } from 'src/app/types/contact';
 import { formatMessage } from 'devextreme/localization';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 import { formatPhone } from 'src/app/pipes/phone.pipe';
-import { ContactStatusModule, FormPopupModule, ContactNewFormComponent, ContactNewFormModule } from 'src/app/devexpress';
 import notify from 'devextreme/ui/notify';
-import { FilterToolBarModule, FilterToolBarComponent } from 'src/app/components';
+import { FilterToolBarModule, FilterToolBarComponent, MemberNewFormComponent, 
+  MemberNewFormModule, ContactStatusModule, FormPopupModule } from 'src/app/components';
 
 @Component({
   templateUrl: './member.component.html',
@@ -20,7 +20,7 @@ import { FilterToolBarModule, FilterToolBarComponent } from 'src/app/components'
 export class MemberComponent {
   @ViewChild(DxDataGridComponent, { static: true }) dataGrid: DxDataGridComponent;
   
-  @ViewChild(ContactNewFormComponent, { static: false }) memberNewForm: ContactNewFormComponent;
+  @ViewChild(MemberNewFormComponent, { static: false }) memberNewForm: MemberNewFormComponent;
 
   @ViewChild(FilterToolBarComponent, { static: false }) filterNewForm: FilterToolBarComponent;
 
@@ -100,7 +100,7 @@ export class MemberComponent {
       DxSelectBoxModule,
       DxTextBoxModule,
 
-      ContactNewFormModule,
+      MemberNewFormModule,
       FormPopupModule,
       ContactStatusModule,
       FilterToolBarModule,

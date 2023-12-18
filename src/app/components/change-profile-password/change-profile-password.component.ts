@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import {Component, EventEmitter, Input, NgModule, Output, ViewChild} from '@angular/core';
 import { DxFormModule } from 'devextreme-angular/ui/form';
 import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
-import {FormPopupComponent, FormPopupModule} from 'src/app/devexpress/utils/form-popup/form-popup.component';
+import {FormPopupComponent, FormPopupModule} from 'src/app/components/shared/form-popup/form-popup.component';
 import notify from 'devextreme/ui/notify';
 
 import {
   PasswordTextBoxComponent,
   PasswordTextBoxModule,
-} from 'src/app/devexpress/library/password-text-box/password-text-box.component';
+} from 'src/app/components/shared/password-text-box/password-text-box.component';
 
 import { ValidationRule } from 'devextreme-angular/common';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';

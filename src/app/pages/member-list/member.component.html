@@ -130,7 +130,7 @@
         </div>
 
         <div *dxTemplate="let cellInfo of 'cellStatus'">
-            <contact-status [value]="cellInfo.data.status"></contact-status>
+            <member-status [value]="cellInfo.data.status"></member-status>
         </div>
 
         <div *dxTemplate="let cellInfo of 'editCellStatus'">
@@ -143,11 +143,11 @@
                 fieldTemplate="field"
             >
                 <div *dxTemplate="let data of 'field'">
-                    <contact-status [value]="cellInfo.value"></contact-status>
+                    <member-status [value]="cellInfo.value"></member-status>
                     <dx-text-box [readOnly]="true"></dx-text-box>
                 </div>
                 <div *dxTemplate="let data of 'item'">
-                    <contact-status [value]="data"></contact-status>
+                    <member-status [value]="data"></member-status>
                 </div>
             </dx-select-box>
         </div>
@@ -157,6 +157,6 @@
     <form-popup [(visible)]="isAddContactPopupOpened" (save)= "onClickSaveNewMember()" 
         [titleText]="('add' | translate) + ' ' + ('member' | translate)"
     >
-        <contact-new-form></contact-new-form>
+        <member-new-form></member-new-form>
     </form-popup>
 </div>

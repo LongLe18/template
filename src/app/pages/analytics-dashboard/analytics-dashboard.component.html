@@ -9,10 +9,30 @@
     </toolbar-analytics>
 
     <div class="cards grey">
-      <opportunities-ticker [data]="opportunities"></opportunities-ticker>
-      <revenue-total-ticker [data]="sales"></revenue-total-ticker>
-      <conversion-ticker></conversion-ticker>
-      <leads-ticker></leads-ticker>
+      <ticker-card
+        titleText="Opportunities"
+        [data]="opportunities"
+        [percentage]="20.3"
+        contentClass="opportunities-total"
+      ></ticker-card>
+      <ticker-card
+        titleText="Revenue Total"
+        [data]="sales"
+        [percentage]="14.7"
+        contentClass="revenue-total"
+      ></ticker-card>
+      <ticker-card
+        titleText="Conversion"
+        total="16%"
+        [percentage]="-2.3"
+        contentClass="conversion"
+      ></ticker-card>
+      <ticker-card
+        titleText="Leads"
+        total="51"
+        [percentage]="8.5"
+        contentClass="leads"
+      ></ticker-card>
     </div>
 
     <div class="cards">

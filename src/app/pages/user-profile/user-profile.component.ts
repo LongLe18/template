@@ -18,13 +18,10 @@ import {
 } from 'devextreme-angular';
 import { forkJoin } from 'rxjs';
 import { PhonePipeModule } from 'src/app/pipes/phone.pipe';
-import {
-  FormPhotoModule,
-  FormPopupModule,
-} from 'src/app/devexpress';
 import { DataService, ScreenService } from 'src/app/services';
 import { formatMessage } from 'devextreme/localization';
-import { ProfileCardModule, ChangeProfilePasswordModule, FormTextboxModule } from 'src/app/components';  
+import { ProfileCardModule, ChangeProfilePasswordModule, FormTextboxModule, FormPhotoModule,
+  FormPopupModule } from 'src/app/components';  
 
 @Component({
   templateUrl: './user-profile.component.html',

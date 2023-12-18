@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
-import { DxDropDownButtonModule, DxButtonModule, DxSelectBoxModule, DxTextBoxModule, DxScrollViewModule, DxToolbarModule, DxTabPanelModule } from 'devextreme-angular';
+import { DxDropDownButtonModule, DxButtonModule, DxSelectBoxModule, DxTextBoxModule, 
+    DxScrollViewModule, DxToolbarModule, DxTabPanelModule, DxFormModule } from 'devextreme-angular';
 
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 @Component({
@@ -8,8 +9,6 @@ import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
     providers: [],
 })
 export class FileListComponent {
-
-
 
     isLoading = false;
 
@@ -30,6 +29,8 @@ export class FileListComponent {
         DxScrollViewModule,
         DxToolbarModule,
         DxTabPanelModule,
+        DxFormModule,
+        
         TranslatePipeModule,
     ],
     providers: [],

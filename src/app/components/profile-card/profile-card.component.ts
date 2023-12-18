@@ -7,11 +7,11 @@ import {
   DxScrollViewModule
 } from 'devextreme-angular';
 // import { FormTextboxModule } from 'src/app/devexpress/utils/form-textbox/form-textbox.component';
-import { FormPhotoModule } from 'src/app/devexpress/utils/form-photo/form-photo.component';
+import { FormPhotoModule } from 'src/app/components/shared/form-photo/form-photo.component';
 import { ApplyPipeModule } from 'src/app/pipes/apply.pipe';
-import { PicturedItemSelectBoxModule } from 'src/app/devexpress/library/pictured-item-select-box/pictured-item-select-box.component';
+import { PicturedItemSelectBoxModule } from 'src/app/components/pictured-item-select-box/pictured-item-select-box.component';
 import { ScreenService } from 'src/app/services';
-import { StatusSelectBoxModule } from 'src/app/devexpress/library/status-select-box/status-select-box.component';
+import { StatusSelectBoxModule } from 'src/app/components/status-select-box/status-select-box.component';
 import { getSizeQualifier } from 'src/app/services/screen.service';
 
 type CardData = Record<string, any>;

@@ -7,6 +7,13 @@
   flex-direction: column;
   flex-grow: 1;
   height: 100%;
+
+  .view-wrapper-scroll {
+    background-color: var(--card-background);
+    width: 100%;
+    margin-top: calc(var(--content-padding) / 2);
+    max-height: calc(100% - var(--toolbar-height));
+  }
 }
 
 .dx-toolbar ::ng-deep {
@@ -49,5 +56,4 @@
   border-top: 1px solid;
   display: flex;
   justify-content: space-around;
-  /* Adjust the values of bottom and right according to your preference */
 }

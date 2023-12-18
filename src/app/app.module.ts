@@ -17,7 +17,7 @@ import {
 } from './pages';
 import { 
   AppFooterModule
-} from './devexpress'
+} from './components'
 import { AuthService, ScreenService, AppInfoService, ThemeService } from './services';
 import { UnauthenticatedContentModule } from './layouts/unauthenticated-content/unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
