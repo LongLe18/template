@@ -3,7 +3,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DxSelectBoxModule, DxTextBoxModule } from 'devextreme-angular';
-import { contactStatusList } from 'src/app/types/contact';
+import { contactStatusList } from 'src/app/constants/types/contact';
 import { ContactStatusModule } from 'src/app/components/shared/member-status/member-status.component';
 
 @Component({

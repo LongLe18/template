@@ -1,4 +1,4 @@
-import { CommonConst } from "./constants/commom";
+import { CommonConst } from "./constants/common";
 
 export const navigation = [
   {

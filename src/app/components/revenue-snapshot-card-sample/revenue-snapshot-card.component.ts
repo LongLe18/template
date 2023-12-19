@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { CardAnalyticsModule } from '../card-analytics/card-analytics.component';
 import { DxPieChartModule } from 'devextreme-angular/ui/pie-chart';
-import { SalesByStateAndCity } from 'src/app/types/analytics';
+import { SalesByStateAndCity } from 'src/app/constants/types/analytics';
 
 @Component({
   selector: 'revenue-snapshot-card',

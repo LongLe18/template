@@ -7,8 +7,9 @@ import { ValidationCallbackData } from 'devextreme-angular/common';
 import { DxFormModule } from 'devextreme-angular/ui/form';
 import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
 import notify from 'devextreme/ui/notify';
-import { AuthService, IResponse } from 'src/app/services';
+import { AuthService } from 'src/app/services';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { IResponse } from 'src/app/constants/types/response';
 
 @Component({
   selector: 'app-create-account',

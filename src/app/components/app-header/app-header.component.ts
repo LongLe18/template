@@ -8,12 +8,12 @@ import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 
 import { UserPanelModule } from '../user-panel/user-panel.component';
 import { LanguagesMenuModule } from '..';
-import { AuthService, IUser } from 'src/app/services';
+import { AuthService } from 'src/app/services';
 import { ThemeSwitcherModule } from 'src/app/components/shared/theme-switcher/theme-switcher.component';
 import { Router } from '@angular/router';
 import { TranslationService, Locale } from 'src/app/services/translate.service';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
-
+import { IUser } from 'src/app/constants/types/user';
 
 @Component({
   selector: 'app-header',
@@ -22,7 +22,7 @@ import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 })
 
 export class AppHeaderComponent implements OnInit {
-  
+
   @Output()
   menuToggle = new EventEmitter<boolean>();
 
@@ -59,7 +59,7 @@ export class AppHeaderComponent implements OnInit {
 
   locales: Locale[];
 
-  constructor(private authService: AuthService, 
+  constructor(private authService: AuthService,
     private router: Router,
     private TranslationService: TranslationService) {
       this.locales = TranslationService.getLocales();

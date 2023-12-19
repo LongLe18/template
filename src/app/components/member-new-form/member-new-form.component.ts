@@ -9,7 +9,7 @@ import {
   DxValidatorModule,
 } from 'devextreme-angular';
 import { FormPhotoUploaderModule, FormTextboxModule } from 'src/app/components';
-import { newContact } from 'src/app/types/contact';
+import { newContact } from 'src/app/constants/types/contact';
 import { getSizeQualifier } from 'src/app/services/screen.service';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
 

@@ -2,7 +2,7 @@ import {
   Component, Input, NgModule,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContactStatus } from 'src/app/types/contact';
+import { ContactStatus } from 'src/app/constants/types/contact';
 
 @Component({
   selector: 'member-status',

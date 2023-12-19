@@ -8,9 +8,9 @@ import {
   mergeMap,
   toArray,
 } from 'rxjs/operators';
-import { Task } from 'src/app/types/task';
-import { Contact } from 'src/app/types/contact';
-import { Sale, SalesOrOpportunitiesByCategory } from '../types/analytics';
+import { Task } from 'src/app/constants/types/task';
+import { Contact } from 'src/app/constants/types/contact';
+import { Sale, SalesOrOpportunitiesByCategory } from '../constants/types/analytics';
 import { environment } from 'src/environments/environment';
 
 

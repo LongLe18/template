@@ -17,10 +17,10 @@ import { DataService } from 'src/app/services';
 import { CardAnalyticsModule } from 'src/app/components/card-analytics/card-analytics.component';
 import { RevenueAnalysisCardModule, RevenueSnapshotCardModule, ConversionCardModule, RevenueCardModule,
   ToolbarAnalyticsModule, TickerCardModule } from 'src/app/components';
-import { analyticsPanelItems, Dates } from 'src/app/types/resource';
+import { analyticsPanelItems, Dates } from 'src/app/constants/types/resource';
 import {
   Sales, SalesByState, SalesByStateAndCity, SalesOrOpportunitiesByCategory,
-} from 'src/app/types/analytics';
+} from 'src/app/constants/types/analytics';
 import { ApplyPipeModule } from 'src/app/pipes/apply.pipe';
 
 type DashboardData = SalesOrOpportunitiesByCategory | Sales | SalesByState | SalesByStateAndCity | null;

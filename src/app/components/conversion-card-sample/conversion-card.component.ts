@@ -4,7 +4,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { CardAnalyticsModule } from 'src/app/components/card-analytics/card-analytics.component';
 import { DxFunnelModule } from 'devextreme-angular/ui/funnel';
-import { SalesOrOpportunitiesByCategory } from 'src/app/types/analytics';
+import { SalesOrOpportunitiesByCategory } from 'src/app/constants/types/analytics';
 
 @Component({
   selector: 'conversion-card',

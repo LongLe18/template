@@ -9,7 +9,7 @@ import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 
 import { DxTabsTypes } from 'devextreme-angular/ui/tabs';
 
-import { Dates, PanelItem } from 'src/app/types/resource';
+import { Dates, PanelItem } from 'src/app/constants/types/resource';
 
 @Component({
   selector: 'toolbar-analytics',

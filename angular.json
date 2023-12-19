@@ -71,11 +71,11 @@
                 "bundleName": "theme-dark"
               },
               {
-                "input": "src/app/theme/styles/variables-light.scss",
+                "input": "src/assets/theme/styles/variables-light.scss",
                 "bundleName": "theme-light"
               },
               {
-                "input": "src/app/theme/styles/variables-dark.scss",
+                "input": "src/assets/theme/styles/variables-dark.scss",
                 "bundleName": "theme-dark"
               }
             ],

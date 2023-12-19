@@ -1,20 +1,9 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot } from '@angular/router';
-import { formatMessage } from 'devextreme/localization'; 
-import { CommonConst } from '../constants/commom';
-
-export interface IUser {
-  email: string;
-  name?: string;
-  avatarUrl?: string;
-  password?: string;
-}
-
-export interface IResponse {
-  isOk: boolean;
-  data?: IUser;
-  message?: string;
-}
+import { formatMessage } from 'devextreme/localization';
+import { CommonConst } from '../constants/common';
+import { LOCAL_STORAGE_KEY } from "../constants/enums";
+import { IUser } from '../constants/types/user';
 
 export const defaultUser: IUser = {
   email: 'admin@gmail.com',
@@ -27,7 +16,8 @@ export const defaultUser: IUser = {
 export class AuthService {
   formatMessage = formatMessage;
 
-  private _user: IUser | null = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : null;;
+  private _user: IUser | null = localStorage.getItem(LOCAL_STORAGE_KEY.USER) ?
+    JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY.USER)) : null;
 
   get loggedIn(): boolean {
     return !!this._user;
@@ -45,7 +35,7 @@ export class AuthService {
     try {
       // Send request
       if (email === defaultUser.email && password === defaultUser.password) {
-        localStorage.setItem('user', JSON.stringify({ ...defaultUser, email }));
+        localStorage.setItem(LOCAL_STORAGE_KEY.USER, JSON.stringify({ ...defaultUser, email }));
         this._user = { ...defaultUser, email };
         this.router.navigate([this._lastAuthenticatedPath]);
         return {
@@ -86,7 +76,7 @@ export class AuthService {
     try {
       // Send request
 
-      this.router.navigate(['/auth/create-account']);
+      this.router.navigate([CommonConst.SIGNUP]);
       return {
         isOk: true,
       };
@@ -129,8 +119,8 @@ export class AuthService {
   }
 
   async logOut() {
-    localStorage.removeItem('user');
-    this.router.navigate(['/auth/login']);
+    localStorage.removeItem(LOCAL_STORAGE_KEY.USER);
+    this.router.navigate([CommonConst.DEFAULT_PATH]);
   }
 }
 
@@ -147,14 +137,14 @@ export class AuthGuardService implements CanActivate {
       'change-password/:recoveryCode',
     ].includes(route.routeConfig?.path || CommonConst.DEFAULT_PATH);
 
-    if (!isLoggedIn) { 
+    if (!isLoggedIn) {
       this.router.navigate([CommonConst.DEFAULT_PATH]);
     }
 
     if (isLoggedIn) {
       this.authService.lastAuthenticatedPath = route.routeConfig?.path || CommonConst.DASHBOARD;
     }
-    
+
     return isLoggedIn || isAuthForm;
   }
 }

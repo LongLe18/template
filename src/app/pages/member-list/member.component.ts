@@ -3,7 +3,7 @@ import { DxDataGridModule, DxDropDownButtonModule, DxButtonModule, DxSelectBoxMo
 import { DxDataGridComponent, DxDataGridTypes } from 'devextreme-angular/ui/data-grid';
 import DataSource from 'devextreme/data/data_source';
 import { DataService } from 'src/app/services';
-import { Contact, contactStatusList, } from 'src/app/types/contact';
+import { Contact, contactStatusList, } from 'src/app/constants/types/contact';
 
 import { formatMessage } from 'devextreme/localization';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';

@@ -14,13 +14,15 @@ src
 │   │   ├── shared # defining components to reuse main components
 │   │   ├── .....
 │   ├── constants # 
+│   │   ├── constant # defining the components to use in pages folder
+│   │   ├── enum # defining components to reuse main components
+│   │   ├── types # like models to define class data
 │   ├── interceptors # Most interceptors transform the outgoing request 
 │   ├── layouts # main layout 
 │   ├── pages # to define main pages 
 │   ├── pipes
 │   ├── services
-│   ├── theme # some global variable style of project
-│   ├── types # like models to define class data
+│   ├── utils # common function
 │   ├── app-navigation.ts # define route to show sidebar of main pages
 │   ├── app-routing.module.ts # all of route of project 
 │   ├── app.component.ts
@@ -35,13 +37,13 @@ src
 | `directory translation` |	src/assets/js/localization | `add json file language for translate (example: https://github.com/DevExpress/DevExtreme/tree/23_1/js/localization/messages)` |
 |  `environments` | src/environments | `includes: API_URL, mode. Only change API_URL` | 
 | `components` | src/app/components | `to define the components to build main pages` | 
-| `constants` | src/app/constants | `some constants of project (not have API_URL)` |
+| `constants` | src/app/constants | `some constants of project (not have API_URL) include: constant, enum, model` |
 | `interceptors` | src/app/interceptors | `` | 
 | `layouts` | src/app/layouts | `to store main layouts project` | 
 | `pages` | src/app/pages | `includes main pages: dashboard, auth, ...` |
 | `pipes` | src/app/pipes |  `defining pipe of project: transorm data in UI` | 
 | `services` | src/app/services | `all of services project: when one service call external API can build like data.service sample` |
-| `types ` | src/app/types | `like models to define class activities project` |  
+| `common function ` | src/app/utils | `define common function in there` |  
 | `route` | src/app/app-routing.module.ts | `all of route of project ` | 
 
 ## Development server

@@ -5,7 +5,7 @@ import {
   Input
 } from '@angular/core';
 import { CardAnalyticsModule } from '../card-analytics/card-analytics.component';
-import { Sales, SalesOrOpportunitiesByCategory } from '../../types/analytics';
+import { Sales, SalesOrOpportunitiesByCategory } from '../../constants/types/analytics';
 import { ApplyPipeModule } from "src/app/pipes/apply.pipe";
 
 @Component({
