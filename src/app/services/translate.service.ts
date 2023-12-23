@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import viDictionary from '../../assets/js/localization/vi.json';
 import enDictionary from '../../assets/js/localization/en.json';
-
-export class Locale {
-    text: string;
-    icon: string;
-    value: string;
-};
+import { Locale } from '../constants/types/locale';
 
 const locales: Locale[] = [
     {

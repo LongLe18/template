@@ -11,9 +11,9 @@ import { LanguagesMenuModule } from '..';
 import { AuthService } from 'src/app/services';
 import { ThemeSwitcherModule } from 'src/app/components/shared/theme-switcher/theme-switcher.component';
 import { Router } from '@angular/router';
-import { TranslationService, Locale } from 'src/app/services/translate.service';
+import { TranslationService } from 'src/app/services/translate.service';
 import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
-import { IUser } from 'src/app/constants/types/user';
+import { IUser, Locale } from 'src/app/constants/types';
 
 @Component({
   selector: 'app-header',
