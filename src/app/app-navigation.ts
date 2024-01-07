@@ -13,7 +13,12 @@ export const navigation = [
       {
         value: 'file',
         text: 'file',
-        path: CommonConst.FILE,
+        path: CommonConst.FILE_LIST,
+      },
+      {
+        value: 'member',
+        text: 'Member',
+        path: CommonConst.MEMBER,
       },
     ],
   },
@@ -27,11 +32,7 @@ export const navigation = [
         text: 'User Profile',
         path: CommonConst.PROFILE,
       },
-      {
-        value: 'member',
-        text: 'Member',
-        path: CommonConst.MEMBER,
-      },
+
     ]
   }
 ];

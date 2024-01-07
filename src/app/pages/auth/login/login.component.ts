@@ -34,18 +34,18 @@ export class LoginComponent implements OnInit {
 
   password: string = 'password';
 
+  constructor(private authService: AuthService, private router: Router, private themeService: ThemeService) {
+    this.themeService.isDark.subscribe((value: boolean) => {
+      this.btnStylingMode = value ? 'outlined' : 'contained';
+    });
+  }
+
   onChangPassword = (e: string) => {
     this.password = e;
   }
 
   switchMode = () => {
     this.isPasswordMode = !this.isPasswordMode;
-  }
-
-  constructor(private authService: AuthService, private router: Router, private themeService: ThemeService) {
-    this.themeService.isDark.subscribe((value: boolean) => {
-      this.btnStylingMode = value ? 'outlined' : 'contained';
-    });
   }
 
   async onSubmit(e: Event) {

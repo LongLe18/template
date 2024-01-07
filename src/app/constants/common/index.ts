@@ -3,6 +3,7 @@ export class CommonConst {
     public static DEFAULT_PATH = '/auth/login';
     public static DASHBOARD = '/analytics-dashboard';
     public static FILE = '/file';
+    public static FILE_LIST = '/file-list';
     public static PROFILE = '/user-profile';
     public static MEMBER = '/member';
 

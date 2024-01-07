@@ -9,11 +9,11 @@ import {
   AnalyticsDashboardComponent,
   UserProfileComponent,
   MemberComponent,
-  FileListComponent,
 } from './pages';
 import { AuthGuardService } from './services';
 
 import { SideNavOuterToolbarComponent, UnauthenticatedContentComponent } from './layouts';
+import { FileListComponent } from './pages/file-list/file-list.component';
 
 
 const routes: Routes = [
@@ -64,7 +64,7 @@ const routes: Routes = [
         canActivate: [AuthGuardService],
       },
       {
-        path: "file",
+        path: "file-list",
         component: FileListComponent,
         canActivate: [AuthGuardService],
       },

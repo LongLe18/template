@@ -28,7 +28,7 @@
             *ngFor="let rule of item.validators"
             [type]="rule.type"
           ></dxi-validation-rule>
-          
+
           <ng-container [ngSwitch]="item.dataField">
             <ng-container *ngSwitchCase="'status'">
               <div *dxTemplate>

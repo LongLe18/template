@@ -4,6 +4,13 @@ import { formatMessage } from 'devextreme/localization';
 import { CommonConst } from '../constants/common';
 import { LOCAL_STORAGE_KEY } from "../constants/enums";
 import { IUser } from '../constants/types/user';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
+interface LoginData {
+  username: string;
+  password: string;
+}
 
 export const defaultUser: IUser = {
   email: 'admin@gmail.com',
@@ -29,24 +36,30 @@ export class AuthService {
     this._lastAuthenticatedPath = value;
   }
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
 
   async logIn(email: string, password: string) {
     try {
+      const data: LoginData = {"username": email, "password": password};
       // Send request
+      // const response = await this.http.post(`${environment.apiUrl}/authentication/api/v1/login`, data).toPromise();
+      // Kiểm tra nếu đăng nhập thành công
+      // if (response['isOk']) {
       if (email === defaultUser.email && password === defaultUser.password) {
-        localStorage.setItem(LOCAL_STORAGE_KEY.USER, JSON.stringify({ ...defaultUser, email }));
-        this._user = { ...defaultUser, email };
+        localStorage.setItem(LOCAL_STORAGE_KEY.USER, JSON.stringify({ ...defaultUser, email })); // replace defaulUser -> response
+        this._user = { ...defaultUser, email };  // replace defaulUser -> response
         this.router.navigate([this._lastAuthenticatedPath]);
+
         return {
           isOk: true,
           data: this._user,
         };
       } else {
+        // Xử lý trường hợp đăng nhập không thành công từ server
         return {
           isOk: false,
           message: formatMessage('message-auth'),
-        }
+        };
       }
     } catch {
       return {
