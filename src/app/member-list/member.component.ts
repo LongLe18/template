@@ -10,7 +10,7 @@ import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 import { formatPhone } from 'src/commonLib/pipes/phone.pipe';
 import notify from 'devextreme/ui/notify';
 import { FilterToolBarModule, FilterToolBarComponent, MemberNewFormComponent, 
-  MemberNewFormModule, ContactStatusModule, FormPopupModule } from 'src/app/components';
+  MemberNewFormModule, ContactStatusModule, FormPopupModule } from 'src/commonLib/components';
 
 @Component({
   templateUrl: './member.component.html',

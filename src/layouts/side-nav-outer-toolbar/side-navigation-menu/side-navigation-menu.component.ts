@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { DxTreeViewModule, DxTreeViewComponent, DxTreeViewTypes } from 'devextreme-angular/ui/tree-view';
 import * as events from 'devextreme/events';
-import { navigation } from '../../app-navigation';
+import { navigation } from '../../../app/app-navigation';
 import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 import { formatMessage } from 'devextreme/localization';
 
@@ -21,15 +21,16 @@ import { formatMessage } from 'devextreme/localization';
   styleUrls: ['./side-navigation-menu.component.scss'],
 })
 export class SideNavigationMenuComponent implements AfterViewInit, OnDestroy {
-  formatMessage = formatMessage;
   
   @ViewChild(DxTreeViewComponent, { static: true })
   menu!: DxTreeViewComponent;
-
+  
   @Output()
   selectedItemChanged = new EventEmitter<DxTreeViewTypes.ItemClickEvent>();
 
   @Output()
+  formatMessage = formatMessage;
+  
   openMenu = new EventEmitter<any>();
 
   @Input()

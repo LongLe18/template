@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import {Component, EventEmitter, Input, NgModule, Output, ViewChild} from '@angular/core';
 import { DxFormModule } from 'devextreme-angular/ui/form';
 import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
-import {FormPopupComponent, FormPopupModule} from 'src/app/components/shared/form-popup/form-popup.component';
+import {FormPopupComponent, FormPopupModule} from 'src/commonLib/components/shared/form-popup/form-popup.component';
 import notify from 'devextreme/ui/notify';
 
 import {
   PasswordTextBoxComponent,
   PasswordTextBoxModule,
-} from 'src/app/components/shared/password-text-box/password-text-box.component';
+} from 'src/commonLib/components/shared/password-text-box/password-text-box.component';
 
 import { ValidationRule } from 'devextreme-angular/common';
 import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
@@ -20,7 +20,6 @@ import { formatMessage } from 'devextreme/localization';
   styleUrls: ['./change-profile-password.component.scss']
 })
 export class ChangeProfilePasswordComponent {
-  formatMessage = formatMessage;
 
   @ViewChild(FormPopupComponent, { static: true }) formPopup;
 
@@ -29,6 +28,8 @@ export class ChangeProfilePasswordComponent {
   @Input() visible = false;
 
   @Output() visibleChange = new EventEmitter<boolean>();
+
+  formatMessage = formatMessage;
 
   isSaveDisabled = true;
 

@@ -14,9 +14,9 @@ import { DxLoadPanelModule } from 'devextreme-angular/ui/load-panel';
 import { DxScrollViewModule } from 'devextreme-angular/ui/scroll-view';
 
 import { DataService } from 'src/commonLib/services';
-import { CardAnalyticsModule } from 'src/app/components/card-analytics/card-analytics.component';
+import { CardAnalyticsModule } from 'src/commonLib/components/card-analytics/card-analytics.component';
 import { RevenueAnalysisCardModule, RevenueSnapshotCardModule, ConversionCardModule, RevenueCardModule,
-  ToolbarAnalyticsModule, TickerCardModule } from 'src/app/components';
+  ToolbarAnalyticsModule, TickerCardModule } from 'src/commonLib/components';
 import { analyticsPanelItems, Dates } from 'src/commonLib/constants/types/resource';
 import {
   Sales, SalesByState, SalesByStateAndCity, SalesOrOpportunitiesByCategory,

@@ -6,10 +6,10 @@ import { CommonModule } from '@angular/common';
 import { DxButtonModule } from 'devextreme-angular/ui/button';
 import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 
-import { UserPanelModule } from '../user-panel/user-panel.component';
-import { LanguagesMenuModule } from '..';
+import { UserPanelModule } from 'src/commonLib/components/user-panel/user-panel.component';
+import { LanguagesMenuModule } from 'src/commonLib/components';
 import { AuthService } from 'src/commonLib/services';
-import { ThemeSwitcherModule } from 'src/app/components/shared/theme-switcher/theme-switcher.component';
+import { ThemeSwitcherModule } from 'src/commonLib/components/shared/theme-switcher/theme-switcher.component';
 import { Router } from '@angular/router';
 import { TranslationService } from 'src/commonLib/services/translate.service';
 import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';

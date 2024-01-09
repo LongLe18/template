@@ -21,7 +21,7 @@ import { PhonePipeModule } from 'src/commonLib/pipes/phone.pipe';
 import { DataService, ScreenService } from 'src/commonLib/services';
 import { formatMessage } from 'devextreme/localization';
 import { ProfileCardModule, ChangeProfilePasswordModule, FormTextboxModule, FormPhotoModule,
-  FormPopupModule } from 'src/app/components';  
+  FormPopupModule } from 'src/commonLib/components';  
 
 @Component({
   templateUrl: './user-profile.component.html',

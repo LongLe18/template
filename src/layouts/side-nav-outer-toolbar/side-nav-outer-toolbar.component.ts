@@ -13,7 +13,9 @@ import { CommonModule } from '@angular/common';
 
 import { Router, RouterModule, NavigationEnd, Event } from '@angular/router';
 import { ScreenService, AppInfoService } from 'src/commonLib/services';
-import { SideNavigationMenuModule, AppHeaderModule, AppFooterModule } from 'src/app/components';
+import { AppFooterModule } from './app-footer/app-footer.component'; 
+import { SideNavigationMenuModule } from './side-navigation-menu/side-navigation-menu.component';
+import { AppHeaderModule } from './app-header/app-header.component';
 
 import { Subscription } from 'rxjs';
 

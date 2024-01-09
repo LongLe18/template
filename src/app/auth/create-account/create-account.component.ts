@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, NgModule, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
-import { LoginOauthModule } from 'src/app/components/login-oauth/login-oauth.component';
+import { LoginOauthModule } from 'src/commonLib/components/login-oauth/login-oauth.component';
 import { ValidationCallbackData } from 'devextreme-angular/common';
 import { DxFormModule } from 'devextreme-angular/ui/form';
 import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';

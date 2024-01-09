@@ -36,14 +36,14 @@ src
 |:-------------:|:-----------:|:-----------:|
 | `directory translation` |	src/assets/js/localization | `add json file language for translate (example: https://github.com/DevExpress/DevExtreme/tree/23_1/js/localization/messages)` |
 |  `environments` | src/environments | `includes: API_URL, mode. Only change API_URL` | 
-| `components` | src/app/components | `to define the components to build main pages` | 
+| `components` | src/commonLib/components | `to define the components to build main pages` | 
 | `constants` | src/commonLib/constants | `some constants of project (not have API_URL) include: constant, enum, model` |
-| `interceptors` | src/app/interceptors | `` | 
-| `layouts` | src/app/layouts | `to store main layouts project` | 
-| `pages` | src/app/pages | `includes main pages: dashboard, auth, ...` |
-| `pipes` | src/app/pipes |  `defining pipe of project: transorm data in UI` | 
-| `services` | src/app/services | `all of services project: when one service call external API can build like data.service sample` |
-| `common function ` | src/app/utils | `define common function in there` |  
+| `interceptors` | src/commonLib/interceptors | `` | 
+| `layouts` | src/commonLib/layouts | `to store main layouts project` | 
+| `pages` | src/commonLib/pages | `includes main pages: dashboard, auth, ...` |
+| `pipes` | src/commonLib/pipes |  `defining pipe of project: transorm data in UI` | 
+| `services` | src/commonLib/services | `all of services project: when one service call external API can build like data.service sample` |
+| `common function ` | src/commonLib/utils | `define common function in there` |  
 | `route` | src/app/app-routing.module.ts | `all of route of project ` | 
 
 ## Development server

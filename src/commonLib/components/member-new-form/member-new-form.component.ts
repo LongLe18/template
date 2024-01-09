@@ -8,7 +8,7 @@ import {
   DxFormModule,
   DxValidatorModule,
 } from 'devextreme-angular';
-import { FormPhotoUploaderModule, FormTextboxModule } from 'src/app/components';
+import { FormPhotoUploaderModule, FormTextboxModule } from 'src/commonLib/components';
 import { newContact } from 'src/commonLib/constants/types/contact';
 import { getSizeQualifier } from 'src/commonLib/services/screen.service';
 import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';

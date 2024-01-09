@@ -2,7 +2,7 @@ import {
   Component, NgModule, Input,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardAnalyticsModule } from 'src/app/components/card-analytics/card-analytics.component';
+import { CardAnalyticsModule } from 'src/commonLib/components/card-analytics/card-analytics.component';
 import { DxFunnelModule } from 'devextreme-angular/ui/funnel';
 import { SalesOrOpportunitiesByCategory } from 'src/commonLib/constants/types/analytics';
 

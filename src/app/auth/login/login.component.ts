@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, NgModule, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { IResponse } from 'src/commonLib/constants/types/response';
-import { LoginOauthModule } from 'src/app/components/login-oauth/login-oauth.component';
+import { LoginOauthModule } from 'src/commonLib/components/login-oauth/login-oauth.component';
 import { DxFormModule } from 'devextreme-angular/ui/form';
 import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
 import { DxButtonModule } from 'devextreme-angular/ui/button';
@@ -10,7 +10,7 @@ import notify from 'devextreme/ui/notify';
 import { AuthService, ThemeService } from 'src/commonLib/services';
 import { CommonConst } from 'src/commonLib/constants/common';
 import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
-import { PasswordTextBoxModule } from 'src/app/components';
+import { PasswordTextBoxModule } from 'src/commonLib/components';
 
 @Component({
   selector: 'app-login',

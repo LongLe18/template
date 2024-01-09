@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { TokenInterceptor } from "../commonLib/interceptors/token.interceptor";
-import { ErrorInterceptor } from "../commonLib/interceptors/error.interceptor";
-import { ApiInterceptor } from "../commonLib/interceptors/api.interceptor";
+import { TokenInterceptor } from "src/commonLib/interceptors/token.interceptor";
+import { ErrorInterceptor } from "src/commonLib/interceptors/error.interceptor";
+import { ApiInterceptor } from "src/commonLib/interceptors/api.interceptor";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
@@ -13,9 +13,6 @@ import { ChangePasswordModule } from './auth/change-password/change-password.com
 import { CreateAccountModule } from './auth/create-account/create-account.component';
 import { LoginModule } from './auth/login/login.component';
 import { AnalyticsDashboardModule } from './analytics-dashboard/analytics-dashboard.component';
-import { 
-  AppFooterModule
-} from './components'
 import { AuthService, ScreenService, AppInfoService, ThemeService } from '../commonLib/services';
 import { UnauthenticatedContentModule } from 'src/layouts/unauthenticated-content/unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +25,6 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     SideNavOuterToolbarModule,
     SingleCardModule,
-    AppFooterModule,
     ResetPasswordModule,
     CreateAccountModule,
     ChangePasswordModule,
