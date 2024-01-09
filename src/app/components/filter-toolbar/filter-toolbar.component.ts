@@ -1,8 +1,8 @@
 import { Component, Input, NgModule } from '@angular/core';
 import { DxDropDownButtonModule, DxButtonModule, DxSelectBoxModule, DxTextBoxModule,
     DxDateRangeBoxModule } from 'devextreme-angular';
-import { Filter, filter } from 'src/app/constants/types/filter';
-import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { Filter, filter } from 'src/commonLib/constants/types/filter';
+import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 
 const msInDay = 1000 * 60 * 60 * 24;
 const now = new Date();

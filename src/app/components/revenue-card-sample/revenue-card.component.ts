@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 import { CardAnalyticsModule } from '../card-analytics/card-analytics.component';
 import { DxChartModule } from 'devextreme-angular/ui/chart';
-import { Sales } from 'src/app/constants/types/analytics';
+import { Sales } from 'src/commonLib/constants/types/analytics';
 
 @Component({
   selector: 'revenue-card',

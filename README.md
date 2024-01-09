@@ -37,7 +37,7 @@ src
 | `directory translation` |	src/assets/js/localization | `add json file language for translate (example: https://github.com/DevExpress/DevExtreme/tree/23_1/js/localization/messages)` |
 |  `environments` | src/environments | `includes: API_URL, mode. Only change API_URL` | 
 | `components` | src/app/components | `to define the components to build main pages` | 
-| `constants` | src/app/constants | `some constants of project (not have API_URL) include: constant, enum, model` |
+| `constants` | src/commonLib/constants | `some constants of project (not have API_URL) include: constant, enum, model` |
 | `interceptors` | src/app/interceptors | `` | 
 | `layouts` | src/app/layouts | `to store main layouts project` | 
 | `pages` | src/app/pages | `includes main pages: dashboard, auth, ...` |

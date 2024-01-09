@@ -2,7 +2,7 @@ import { Component, NgModule, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DxDropDownButtonModule } from 'devextreme-angular/ui/drop-down-button';
-import { TranslationService } from 'src/app/services/translate.service';
+import { TranslationService } from 'src/commonLib/services/translate.service';
 import { DxListModule, DxListTypes } from 'devextreme-angular/ui/list';
 
 @Component({

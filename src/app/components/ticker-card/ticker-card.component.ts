@@ -5,8 +5,8 @@ import {
   Input
 } from '@angular/core';
 import { CardAnalyticsModule } from '../card-analytics/card-analytics.component';
-import { Sales, SalesOrOpportunitiesByCategory } from '../../constants/types/analytics';
-import { ApplyPipeModule } from "src/app/pipes/apply.pipe";
+import { Sales, SalesOrOpportunitiesByCategory } from 'src/commonLib/constants/types/analytics';
+import { ApplyPipeModule } from "src/commonLib/pipes/apply.pipe";
 
 @Component({
   selector: 'ticker-card',

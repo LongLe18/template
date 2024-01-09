@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import {
   DxButtonModule,
 } from 'devextreme-angular';
-import { ScreenService } from 'src/app/services';
+import { ScreenService } from 'src/commonLib/services';
 import {DxScrollViewModule} from "devextreme-angular/ui/scroll-view";
 
 @Component({

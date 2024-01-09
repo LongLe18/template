@@ -6,7 +6,7 @@ import {
 import { CardAnalyticsModule } from '../card-analytics/card-analytics.component';
 import { DxDataGridModule } from 'devextreme-angular/ui/data-grid';
 import { DxBulletModule } from 'devextreme-angular/ui/bullet';
-import { SalesByState } from 'src/app/constants/types/analytics';
+import { SalesByState } from 'src/commonLib/constants/types/analytics';
 
 @Component({
   selector: 'revenue-analysis-card',

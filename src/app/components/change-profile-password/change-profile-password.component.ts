@@ -11,7 +11,7 @@ import {
 } from 'src/app/components/shared/password-text-box/password-text-box.component';
 
 import { ValidationRule } from 'devextreme-angular/common';
-import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 import { formatMessage } from 'devextreme/localization';
 
 @Component({

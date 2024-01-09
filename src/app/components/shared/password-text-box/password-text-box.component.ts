@@ -14,7 +14,7 @@ import {
   DxValidatorModule
 } from 'devextreme-angular';
 import { ValidationRule } from 'devextreme-angular/common';
-import { ApplyPipeModule } from 'src/app/pipes/apply.pipe';
+import { ApplyPipeModule } from 'src/commonLib/pipes/apply.pipe';
 import { ContactStatusModule } from 'src/app/components/shared/member-status/member-status.component';
 
 @Component({

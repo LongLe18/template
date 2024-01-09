@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import {
-  LoginComponent,
-  ResetPasswordComponent,
-  CreateAccountComponent,
-  ChangePasswordComponent,
-  AnalyticsDashboardComponent,
-  UserProfileComponent,
-  MemberComponent,
-} from './pages';
-import { AuthGuardService } from './services';
+import { AuthGuardService } from '../commonLib/services';
 
-import { SideNavOuterToolbarComponent, UnauthenticatedContentComponent } from './layouts';
-import { FileListComponent } from './pages/file-list/file-list.component';
+import { SideNavOuterToolbarComponent, UnauthenticatedContentComponent } from 'src/layouts';
+import { FileListComponent } from './file-list/file-list.component';
 
+import { LoginComponent } from './auth/login/login.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { CreateAccountComponent } from './auth/create-account/create-account.component';
+import { ChangePasswordComponent } from './auth/change-password/change-password.component';
+import { AnalyticsDashboardComponent } from './analytics-dashboard/analytics-dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MemberComponent } from './member-list/member.component';
 
 const routes: Routes = [
   {

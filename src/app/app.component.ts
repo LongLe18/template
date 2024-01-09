@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnDestroy, } from '@angular/core';
-import { AppInfoService, AuthService, ScreenService, ThemeService } from './services';
-import { TranslationService } from './services/translate.service';
+import { AppInfoService, AuthService, ScreenService, ThemeService } from '../commonLib/services';
+import { TranslationService } from '../commonLib/services/translate.service';
 import { locale, loadMessages } from 'devextreme/localization';
 @Component({
   selector: 'app-root',

@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   Component, Input, NgModule, OnInit,
 } from '@angular/core';
-import { TaskStatus, TaskPriority } from 'src/app/constants/types/task';
+import { TaskStatus, TaskPriority } from 'src/commonLib/constants/types/task';
 import { DxTextBoxModule } from 'devextreme-angular/ui/text-box';
 
 @Component({

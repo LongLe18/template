@@ -1,7 +1,7 @@
 import { Component, NgModule, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ScreenService } from 'src/app/services';
+import { ScreenService } from 'src/commonLib/services';
 
 import { DxButtonModule } from 'devextreme-angular/ui/button';
 import { DxTabsModule } from 'devextreme-angular/ui/tabs';
@@ -9,7 +9,7 @@ import { DxToolbarModule } from 'devextreme-angular/ui/toolbar';
 
 import { DxTabsTypes } from 'devextreme-angular/ui/tabs';
 
-import { Dates, PanelItem } from 'src/app/constants/types/resource';
+import { Dates, PanelItem } from 'src/commonLib/constants/types/resource';
 
 @Component({
   selector: 'toolbar-analytics',

@@ -3,7 +3,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DxSelectBoxModule, DxTextBoxModule } from 'devextreme-angular';
-import { ApplyPipeModule } from 'src/app/pipes/apply.pipe';
+import { ApplyPipeModule } from 'src/commonLib/pipes/apply.pipe';
 
 @Component({
   selector: 'pictured-item-select-box',

@@ -10,7 +10,7 @@ import {
   DxButtonModule,
 } from 'devextreme-angular';
 import { DxButtonTypes } from 'devextreme-angular/ui/button';
-import {DataService, ScreenService} from 'src/app/services';
+import {DataService, ScreenService} from 'src/commonLib/services';
 
 @Component({
   selector: 'right-side-panel',

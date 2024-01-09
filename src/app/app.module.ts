@@ -1,25 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { TokenInterceptor } from "./interceptors/token.interceptor";
-import { ErrorInterceptor } from "./interceptors/error.interceptor";
-import { ApiInterceptor } from "./interceptors/api.interceptor";
+import { TokenInterceptor } from "../commonLib/interceptors/token.interceptor";
+import { ErrorInterceptor } from "../commonLib/interceptors/error.interceptor";
+import { ApiInterceptor } from "../commonLib/interceptors/api.interceptor";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from './app.component';
-import { SideNavOuterToolbarModule, SingleCardModule } from './layouts';
-import {
-  ResetPasswordModule,
-  CreateAccountModule,
-  ChangePasswordModule,
-  LoginModule,
-  AnalyticsDashboardModule,
-} from './pages';
+import { SideNavOuterToolbarModule, SingleCardModule } from 'src/layouts';
+import { ResetPasswordModule } from './auth/reset-password/reset-password.component';
+import { ChangePasswordModule } from './auth/change-password/change-password.component';
+import { CreateAccountModule } from './auth/create-account/create-account.component';
+import { LoginModule } from './auth/login/login.component';
+import { AnalyticsDashboardModule } from './analytics-dashboard/analytics-dashboard.component';
 import { 
   AppFooterModule
 } from './components'
-import { AuthService, ScreenService, AppInfoService, ThemeService } from './services';
-import { UnauthenticatedContentModule } from './layouts/unauthenticated-content/unauthenticated-content';
+import { AuthService, ScreenService, AppInfoService, ThemeService } from '../commonLib/services';
+import { UnauthenticatedContentModule } from 'src/layouts/unauthenticated-content/unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({

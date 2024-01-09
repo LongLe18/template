@@ -12,9 +12,9 @@ import {
   DxValidationGroupModule,
   DxValidationGroupComponent,
 } from 'devextreme-angular';
-import { ScreenService } from 'src/app/services';
-import { ApplyPipeModule } from 'src/app/pipes/apply.pipe';
-import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { ScreenService } from 'src/commonLib/services';
+import { ApplyPipeModule } from 'src/commonLib/pipes/apply.pipe';
+import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 
 @Component({
   selector: 'form-popup',

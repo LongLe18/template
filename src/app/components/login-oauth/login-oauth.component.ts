@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { DxButtonModule } from 'devextreme-angular/ui/button';
-import { ThemeService } from '../../services/theme.service';
-import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { ThemeService } from '../../../commonLib/services/theme.service';
+import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 
 @Component({
   selector: 'app-login-oauth',

@@ -1,4 +1,4 @@
-import { CommonConst } from "./constants/common";
+import { CommonConst } from "src/commonLib/constants/common";
 
 export const navigation = [
   {

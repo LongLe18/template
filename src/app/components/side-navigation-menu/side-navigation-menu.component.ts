@@ -12,7 +12,7 @@ import {
 import { DxTreeViewModule, DxTreeViewComponent, DxTreeViewTypes } from 'devextreme-angular/ui/tree-view';
 import * as events from 'devextreme/events';
 import { navigation } from '../../app-navigation';
-import { TranslatePipeModule } from 'src/app/pipes/translate.pipe';
+import { TranslatePipeModule } from 'src/commonLib/pipes/translate.pipe';
 import { formatMessage } from 'devextreme/localization';
 
 @Component({
